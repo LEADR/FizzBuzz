@@ -1,6 +1,6 @@
 var myArray = [];
 
-for (var i = 1; i <= 10; i++) {
+for (var i = 0; i <= 99; i++) {
   if ((i % 3) === 0) {
     myArray[i] = "fizz";
   } else if ((i % 5) === 0) {
@@ -12,4 +12,7 @@ for (var i = 1; i <= 10; i++) {
   }
 }
 
-console.log(myArray);
+for (var i = 0; i <= 99; i++) {
+  var paragraph = $('<p>').html(myArray[i]);
+  $('body').append(paragraph);
+}
