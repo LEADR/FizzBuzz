@@ -1,21 +1,17 @@
 $('document').ready(function() {
-  var debug = function(message) {
-  console.log("Debug", message);
-  };
 
-  var numberChoice = function() {
-    prompt("Please choose a number.");
-  };
-  numberChoice();
+  var integer;
 
-  var integer = +numberChoice;
-
-  if (isNaN(integer)) {
-    alert("That is not a number! Please type in a number using numerical digits.");
-    numberChoice();
-  } else if (integer % 1 !== 0) {
-    alert("Please choose a whole number integer.");
-    numberChoice();
+  while(true) {
+    var numberChoice = prompt("Please choose a number.");
+    if (isNaN(numberChoice)) {
+      alert("That is not a number! Please type in a number using numerical digits.");
+    } else if ((numberChoice % 1) !== 0) {
+      alert("Please choose a whole number integer.");
+    } else {
+      integer = +numberChoice;
+      break;
+    }
   }
 
   var myArray = [];
